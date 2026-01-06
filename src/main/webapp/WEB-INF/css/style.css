@@ -43,3 +43,99 @@ header .container { display: flex; justify-content: space-between; align-items: 
 .pagination a:hover { background: #34495e; color: white; }
 
 footer { background: #2c3e50; color: white; text-align: center; padding: 30px 0; margin-top: 50px; }
+
+
+/* 로그인 & 회원가입 공통 */
+.login-container, .register-container {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 30px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.login-form, .register-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.required { color: red; }
+
+.help-text {
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
+}
+
+.btn-login, .btn-register {
+  padding: 14px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-login:hover, .btn-register:hover {
+  background: #2980b9;
+}
+
+.btn-cancel {
+  display: block;
+  text-align: center;
+  padding: 12px;
+  background: #95a5a6;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.login-links {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.login-links a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.alert {
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.alert.error {
+  background: #fdf2f2;
+  color: #c53030;
+  border: 1px solid #feb2b2;
+}
