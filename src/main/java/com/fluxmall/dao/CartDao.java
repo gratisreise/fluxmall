@@ -65,5 +65,11 @@ public class CartDao {
         return jdbcTemplate.update(sql, cartId);
     }
 
+    // CartDao.java에 추가
+    public int updateCartItemQuantity(Long cartItemId, int newQuantity) {
+        String sql = "UPDATE cart_item SET quantity = ? WHERE id = ?";
+        return jdbcTemplate.update(sql, newQuantity, cartItemId);
+    }
+
 
 }
