@@ -46,42 +46,21 @@
 | 의존성 관리      | Maven                         |
 | 기타             | Lombok, JSTL                  |
 
-## 시작하기
-
-### 준비물
-
-*   Java 11 이상
-*   Maven 3.6 이상
-*   MySQL 8.0 이상
-
-### 설치 및 실행
-
-1.  **저장소 복제:**
-    ```bash
-    git clone https://github.com/your-username/fluxmall.git
-    cd fluxmall
-    ```
-
-2.  **데이터베이스 설정:**
-    *   MySQL에 `fluxmall`이라는 이름의 데이터베이스를 생성합니다.
-    *   `src/main/resources/application.properties` 파일에서 데이터베이스 연결 정보를 수정합니다.
-    ```properties
-    spring.datasource.url=jdbc:mysql://localhost:3306/fluxmall
-    spring.datasource.username=your-username
-    spring.datasource.password=your-password
-    ```
-    *   `database/schema.sql` 파일을 실행하여 테이블을 생성합니다. (**참고:** 이 파일은 직접 생성해야 합니다.)
-
-3.  **프로젝트 빌드:**
-    ```bash
-    ./mvnw clean package
-    ```
-
-4.  **애플리케이션 실행:**
-    ```bash
-    ./mvnw spring-boot:run
-    ```
-    애플리케이션은 `http://localhost:8080`에서 접속할 수 있습니다.
+## 회고 및 복기
+### 한계 
+1. JSP의 기술적 한계와 제약 (View 레이어)
+   가장 큰 단점은 JSP 자체의 기술 노후화 
+   - **Spring Boot의 철학과의 충돌**: Spring Boot는 내장 서블릿 컨테이너(Embedded Tomcat)를 통해 단일 JAR 파일로 배포하는 것을 지향한다. 하지만 JSP는 서블릿으로 컴파일되는 과정이 필요하여 내장 톰캣 사용 시 제약이 많고, 반드시 WAR 형태로 패키징해야 하는 번거로움 
+   - **성능 저하**: 수정 시마다 컴파일 과정을 거쳐야 하며, 최근의 Thymeleaf나 Mustache 같은 템플릿 엔진에 비해 렌더링 속도나 메모리 효율이 떨어짐 
+   - **로직의 혼재**: <% %> (스크립틀릿) 사용 유혹이 강해, View에 비즈니스 로직이 침투하기 쉽고 유지보수를 어렵게 만듬
+2. JdbcTemplate의 생산성 문제 (Data 레이어)
+   - **반복적인 SQL 작성**: CRUD(생성, 조회, 수정, 삭제)를 수행할 때마다 매번 SQL 쿼리를 직접 작성해야 하고 이는 오타로 인한 런타임 에러 발생 확률을 높임
+   - **객체 매핑의 번거로움**: RowMapper를 통해 DB 레코드를 자바 객체로 일일이 변환해줘야 합니다. 엔티티의 필드가 많아질수록 코드가 비대해짐
+   - **객체 지향적 설계의 어려움**: 관계형 DB와 자바 객체 간의 구조적 차이를 해결하기 어려움
+3. Spring Boot 2.x 버전의 노후화
+   현재 Spring Boot는 3.x 버전이 표준이 되었습니다. 
+   - **Java 버전 제약**: Java 17 이상의 최신 기능(Records, Sealed Classes 등)과 Spring Boot 3의 성능 최적화 혜택을 누리기 어려움 
+   - **보안 및 지원 종료**: Spring Boot 2.7.x를 끝으로 공식적인 OSS 지원이 종료(EOL)되었거나 종료될 예정이므로, 보안 패치나 라이브러리 업데이트에 취약할 수 있음
 
 ## 프로젝트 구조 (주요 패키지)
 
