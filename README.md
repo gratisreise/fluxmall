@@ -8,6 +8,13 @@
 이 프로젝트의 주요 목표는 **핵심 쇼핑몰 기능(회원, 상품, 장바구니, 주문)**을 간결하고 명확하게 구현하는 것입니다.
 현대적인 SPA(Single Page Application)가 아닌 클래식한 MVC 구조를 통해 Spring Boot의 기본 동작 방식을 이해하는 데 좋은 예제입니다.
 
+## 아키텍처
+### 소프트웨어 아키텍처
+![소프트웨어아키텍처](https://mylog-imgsource.s3.ap-northeast-2.amazonaws.com/flux-mall/version1/softwarearchitecture.png)
+
+### ERD 
+![ERD](https://mylog-imgsource.s3.ap-northeast-2.amazonaws.com/flux-mall/version1/erd.png)
+
 ## 주요 기능
 
 ### 회원
