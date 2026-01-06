@@ -287,3 +287,129 @@ footer { background: #2c3e50; color: white; text-align: center; padding: 30px 0;
 .back-link a:hover {
   text-decoration: underline;
 }
+
+
+/* 장바구니 페이지 */
+.empty-cart {
+  text-align: center;
+  padding: 80px 20px;
+  color: #7f8c8d;
+}
+
+.empty-cart p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.btn-primary {
+  padding: 14px 30px;
+  background: #3498db;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 18px;
+}
+
+.cart-table-container {
+  margin: 30px 0;
+  overflow-x: auto;
+}
+
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.cart-table th, .cart-table td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-table th {
+  background: #f8f9fa;
+  font-weight: bold;
+}
+
+.product-info {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  gap: 15px;
+}
+
+.product-info img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.product-info span {
+  font-weight: bold;
+  display: block;
+}
+
+.product-info small {
+  color: #7f8c8d;
+  display: block;
+  margin-top: 5px;
+}
+
+.quantity button {
+  width: 30px;
+  height: 30px;
+  background: #ecf0f1;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.quantity input {
+  width: 50px;
+  text-align: center;
+  border: none;
+  font-weight: bold;
+}
+
+.btn-delete {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cart-summary {
+  text-align: right;
+  margin: 40px 0;
+}
+
+.total-price-box {
+  display: inline-block;
+  background: #2c3e50;
+  color: white;
+  padding: 20px 40px;
+  border-radius: 8px;
+  font-size: 24px;
+  margin-right: 20px;
+}
+
+.total-price-box span {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.btn-order-all {
+  padding: 18px 40px;
+  background: #e67e22;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  display: inline-block;
+}
