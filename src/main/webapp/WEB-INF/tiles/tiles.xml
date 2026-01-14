@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+    <definition name="baseLayout" template="/WEB-INF/views/layout/base.jsp">
+        <put-attribute name="header" value="/WEB-INF/views/layout/header.jsp"/>
+        <put-attribute name="content" value=""/>
+        <put-attribute name="footer" value="/WEB-INF/views/layout/footer.jsp"/>
+    </definition>
+
+    <definition name="home" extends="baseLayout">
+        <put-attribute name="title" value="FluxMall"/>
+        <put-attribute name="content" value="/WEB-INF/views/home.jsp"/>
+    </definition>
+
+    <definition name="member/login" extends="baseLayout">
+        <put-attribute name="title" value="로그인"/>
+        <put-attribute name="content" value="/WEB-INF/views/member/login.jsp"/>
+    </definition>
+
+    <definition name="member/register" extends="baseLayout">
+        <put-attribute name="title" value="회원가입"/>
+        <put-attribute name="content" value="/WEB-INF/views/member/register.jsp"/>
+    </definition>
+
+    <definition name="member/mypage" extends="baseLayout">
+        <put-attribute name="title" value="마이페이지"/>
+        <put-attribute name="content" value="/WEB-INF/views/member/mypage.jsp"/>
+    </definition>
+
+    <definition name="product/list" extends="baseLayout">
+        <put-attribute name="title" value="상품 목록"/>
+        <put-attribute name="content" value="/WEB-INF/views/product/list.jsp"/>
+    </definition>
+
+    <definition name="product/detail" extends="baseLayout">
+        <put-attribute name="title" value="상품 상세"/>
+        <put-attribute name="content" value="/WEB-INF/views/product/detail.jsp"/>
+    </definition>
+
+    <definition name="order/create" extends="baseLayout">
+        <put-attribute name="title" value="주문서"/>
+        <put-attribute name="content" value="/WEB-INF/views/order/create.jsp"/>
+    </definition>
+
+    <definition name="order/complete" extends="baseLayout">
+        <put-attribute name="title" value="주문 완료"/>
+        <put-attribute name="content" value="/WEB-INF/views/order/complete.jsp"/>
+    </definition>
+
+    <definition name="order/list" extends="baseLayout">
+        <put-attribute name="title" value="주문 내역"/>
+        <put-attribute name="content" value="/WEB-INF/views/order/list.jsp"/>
+    </definition>
+
+</tiles-definitions>
